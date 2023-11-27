@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
@@ -18,15 +19,15 @@ function App() {
   return (
     <>
       <h3>Vite + React</h3>
-      {/* {
-        singers.map(singer=> <Singers singer={singer}></Singers>)
+      {
+        singers.map(singer=> <Singers key={singer.id} singer={singer}></Singers>)
       }
       
       <Actor name={'Bappa Raz'}></Actor>
       {
-        actors.map(actor=> <Actor name={actor}></Actor>)
-      } */}
-      {/* <Todo 
+        actors.map((actor,idx)=> <Actor key={idx} name={actor}></Actor>)
+      }
+      <Todo 
         task="learn react" 
         isDone={true}>
      </Todo>
@@ -37,7 +38,7 @@ function App() {
       <Todo 
         task="Try JSX"
         isDone={true}>
-     </Todo> */}
+     </Todo>
       <Device name="laptop" price="505505"></Device>
       <Device name="mobile" price="17000"></Device>
       <Device name="watch" price="27000"></Device>
